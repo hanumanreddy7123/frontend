@@ -1,0 +1,61 @@
+/* Grid Container */
+.gri-container {
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    padding: 20px;
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust column width as needed */
+    grid-gap: 10px; /* Gap between grid items */
+}
+
+/* Individual Grid Item */
+.list1 {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 2px;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s; */
+}
+
+.list1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.im {
+    max-width: 100%; /* Adjust image width */
+    height: 50px; /* Maintain aspect ratio */
+}
+
+.data1 {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.title1 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.rating1 {
+    font-size: 14px;
+    color: #888;
+}
+
+.playlist1 {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.playlist1:hover {
+    background-color: #0056b3;
+}

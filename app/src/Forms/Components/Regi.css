@@ -1,0 +1,50 @@
+input
+{
+    border: 2px;
+     visibility: inherit;
+     border-spacing: 10px;
+     border-bottom: 4px;
+     padding-top: 10px;
+}
+.Re
+{
+    padding: 40px;
+    text-decoration: wavy;
+    text-indent: 10px;
+}
+.movies
+{
+    text-align: center;
+    align-items: center;
+}
+.data
+{
+    float: left;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.title
+{
+    float: left;
+}
+.rating
+{
+    float: left;
+}
+.container
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20;
+}
+.container-item
+{
+    flex: 1;
+}
+.background {
+    background-image: url("https://img.freepik.com/premium-photo/movie-clapper-board-black-background-with-smoke_167862-7463.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 100;
+}
+
