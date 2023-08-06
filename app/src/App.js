@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route exact path='/home' Component={Home}></Route>
         <Route exact path='/login' Component={Login}></Route>
-        <Route exact path='/movies' Component={Movies}></Route>
+        <Route exact path='/' Component={Movies}></Route>
         <Route exact path='/playlist' Component={Playlist}></Route>
         </Routes>
       

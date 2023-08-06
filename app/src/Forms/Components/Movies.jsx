@@ -19,6 +19,11 @@ function Movies()
     }
     const handlegetMovies = async () => {
         try {
+            if(!header)
+            {
+                alert("Login to search")
+                navigate('/home')
+            }
             const response = await axios.get(`https://www.omdbapi.com/?s=${searchvalue}&apikey=fed34f50`,{header});
     
             Setdata(response.data.Search);
@@ -49,7 +54,7 @@ function Movies()
             };
     
             try {
-                const response = await axios.post("http://localhost:5050/playlist", data1,{header});
+                const response = await axios.post("https://backendapp-bkea.onrender.com/playlist", data1,{header});
     
                 SetPlaylist(prevPlaylist => ({ ...prevPlaylist, movie: [...prevPlaylist.movie, list] }));
                 console.log(response.data);

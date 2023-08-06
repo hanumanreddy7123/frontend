@@ -15,7 +15,7 @@ function Playlist() {
             alert("No access")
             navigate('/home')
         }
-        axios.get(`http://localhost:5050/getplaylist/${id}`)
+        axios.get(`https://backendapp-bkea.onrender.com/getplaylist/${id}`)
             .then((res) => {
                 console.log(res.data);
                 setPlaylistData(res.data.result);
@@ -28,7 +28,7 @@ function Playlist() {
     const handleRemoveFromPlaylist = async (movieId) => {
         try {
             const userId = localStorage.getItem("userid");
-            await axios.delete(`http://localhost:5050/remove/${userId}/${movieId}`, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } });
+            await axios.delete(`https://backendapp-bkea.onrender.com/remove/${userId}/${movieId}`, { headers: { Authorization: `Bearer ${localStorage.getItem('token')}` } });
            
             setPlaylistData(prevData => ({
                 ...prevData,
@@ -41,7 +41,7 @@ function Playlist() {
 
     useEffect(() => {
         if (playlistData && playlistData.movie.length === 0) {
-            navigate('/movies');
+            navigate('/');
             alert("Playlist is empty and will be directed to ADD favoutites")
         }
     }, [playlistData, navigate]);

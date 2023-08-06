@@ -23,12 +23,12 @@ function Log() {
         }
 
         try {
-            axios.post("http://localhost:5050/login", data)
+           await axios.post("https://backendapp-bkea.onrender.com/login", data)
                 .then((res) => {
                     if (res.data.code == 200) {
                         localStorage.setItem("token",res.data.token)
                         localStorage.setItem("userid",res.data.userid)
-                        navigate('/Movies');
+                        navigate('/');
                     } 
                     else {
                         
@@ -40,7 +40,6 @@ function Log() {
                 {
                     console.log("error in sigining")
                     alert("User not exists register to continue")
-                    navigate('/login')
                 })
         } catch (error) {
             console.error("Error signing in:", error);

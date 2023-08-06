@@ -23,7 +23,7 @@ function Regi() {
             password: password
         }
         try {
-         await axios.post("http://localhost:5050/register",data)
+         await axios.post("https://backendapp-bkea.onrender.com/register",data)
          .then((res)=>
          {
              navigate('/home');
